@@ -1,0 +1,17 @@
+{
+  "name": "rusted-invidious-dash-generator",
+  "version": "1.0.0",
+  "description": "Microservice for generating DASH MPD manifests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "11Tuvork28",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "fastify": "^4.10.2",
+    "xml-js": "^1.6.11"
+  }
+}
