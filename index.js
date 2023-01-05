@@ -3,7 +3,7 @@ const generate_dash_file_from_formats = require('./dashUtils');
 
 // Declare a route
 fastify.post('/', async (request, reply) => {
-    let formats = request.body.formats;
+    let formats = Array(...request.body.videoFormats, ...request.body.audioFormats);
     let length = request.body.videoLength;
     if (length == undefined || length == null || formats == undefined || formats == null) {
         reply.sendStatus(400);
@@ -15,7 +15,7 @@ fastify.post('/', async (request, reply) => {
   // Run the server!
   const start = async () => {
     try {
-      await fastify.listen({ port: 3000 })
+      await fastify.listen({ port: 3030 })
     } catch (err) {
       process.exit(1)
     }
